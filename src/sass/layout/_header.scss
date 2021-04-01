@@ -1,7 +1,84 @@
-.section-header {
+.site-header {
   width: 100%;
+  height: 100%;
+  max-height: 4.2725em;
+
   border-bottom: 1px solid $color-separator;
   position: fixed;
   z-index: 1;
   background: $color-bg-white;
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 4.2725em;
+
+    .site-branding {
+      .site-title {
+        font-size: 1em;
+        margin: 0;
+
+        a {
+          display: block;
+          background: url(../../dist/images/logo.svg) no-repeat center center;
+          background-size: contain;
+          text-indent: -999em;
+
+          width: 7.8925em;
+          height: 3.0625em;
+        }
+      }
+    }
+
+    .site-navigation {
+      &-primary {
+        .menu-primary-nav-container {
+          .menu {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &-item {
+              margin: 0 0.25em;
+
+              &:first-child {
+                margin-left: 0;
+              }
+
+              &:last-child {
+                margin-right: 0;
+              }
+
+              &-icon {
+                display: block;
+                width: 2.5875em;
+                height: 2.5875em;
+                border-radius: $radius-primary;
+                background-color: $color-bg-light;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+              }
+
+              &-link {
+                text-decoration: none;
+              }
+
+              &-button {
+                background-color: $color-copy;
+                border-radius: $radius-primary;
+                padding: 0.7em 0.875em;
+                color: $color-bg-white;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
