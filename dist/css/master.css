@@ -364,24 +364,26 @@ summary {
 .site-header {
   width: 100%;
   height: 100%;
-  max-height: 4.2725em;
-  border-bottom: 1px solid #e5e5e5;
+  max-height: 7.25em;
   position: fixed;
   z-index: 1;
   background: #ffffff; }
 
-.site-header-inner {
+.site-header-primary {
+  border-bottom: 1px solid #dddddd; }
+
+.site-header-primary .site-header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  max-height: 4.2725em; }
+  max-height: 4.25em; }
 
-.site-header-inner .site-branding .site-title {
+.site-header-primary .site-header-inner .site-branding .site-title {
   font-size: 1em;
   margin: 0; }
 
-.site-header-inner .site-branding .site-title a {
+.site-header-primary .site-header-inner .site-branding .site-title a {
   display: block;
   background: url(../../dist/images/logo.svg) no-repeat center center;
   background-size: contain;
@@ -389,23 +391,23 @@ summary {
   width: 7.8925em;
   height: 3.0625em; }
 
-.site-header-inner .site-navigation-primary .menu-primary-nav-container .menu {
+.site-header-primary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu {
   list-style: none;
   padding-left: 0;
   display: flex;
   flex-direction: row;
   align-items: center; }
 
-.site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item {
+.site-header-primary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item {
   margin: 0 0.25em; }
 
-.site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item:first-child {
+.site-header-primary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item:first-child {
   margin-left: 0; }
 
-.site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item:last-child {
+.site-header-primary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item:last-child {
   margin-right: 0; }
 
-.site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item-icon {
+.site-header-primary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item-icon {
   display: block;
   width: 2.5875em;
   height: 2.5875em;
@@ -416,15 +418,76 @@ summary {
   align-items: center;
   justify-content: center; }
 
-.site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item-link {
+.site-header-primary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item-link {
   text-decoration: none; }
 
-.site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item-button {
+.site-header-primary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item-button {
   background-color: #000000;
   border-radius: 5px;
   padding: 0.7em 0.875em;
   color: #ffffff;
   font-weight: 700; }
+
+.site-header-secondary {
+  border-bottom: 1px solid #dddddd; }
+
+.site-header-secondary .site-navigation-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+
+.site-header-secondary .site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-height: 3em; }
+
+.site-header-secondary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu,
+.site-header-secondary .site-header-inner .site-navigation-primary .menu-secondary-nav-container .menu, .site-header-secondary .site-header-inner .site-navigation-secondary .menu-primary-nav-container .menu,
+.site-header-secondary .site-header-inner .site-navigation-secondary .menu-secondary-nav-container .menu {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.site-header-secondary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item:not(:first-child)::before,
+.site-header-secondary .site-header-inner .site-navigation-primary .menu-secondary-nav-container .menu-item:not(:first-child)::before, .site-header-secondary .site-header-inner .site-navigation-secondary .menu-primary-nav-container .menu-item:not(:first-child)::before,
+.site-header-secondary .site-header-inner .site-navigation-secondary .menu-secondary-nav-container .menu-item:not(:first-child)::before {
+  content: "";
+  width: 1px;
+  height: 0.729375em;
+  background-color: #dddddd;
+  transform: translateY(50%);
+  position: absolute; }
+
+.site-header-secondary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item:first-child .menu-item-link,
+.site-header-secondary .site-header-inner .site-navigation-primary .menu-secondary-nav-container .menu-item:first-child .menu-item-link, .site-header-secondary .site-header-inner .site-navigation-secondary .menu-primary-nav-container .menu-item:first-child .menu-item-link,
+.site-header-secondary .site-header-inner .site-navigation-secondary .menu-secondary-nav-container .menu-item:first-child .menu-item-link {
+  padding-left: 0; }
+
+.site-header-secondary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item:last-child .menu-item-link,
+.site-header-secondary .site-header-inner .site-navigation-primary .menu-secondary-nav-container .menu-item:last-child .menu-item-link, .site-header-secondary .site-header-inner .site-navigation-secondary .menu-primary-nav-container .menu-item:last-child .menu-item-link,
+.site-header-secondary .site-header-inner .site-navigation-secondary .menu-secondary-nav-container .menu-item:last-child .menu-item-link {
+  padding-right: 0; }
+
+.site-header-secondary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item-link,
+.site-header-secondary .site-header-inner .site-navigation-primary .menu-secondary-nav-container .menu-item-link, .site-header-secondary .site-header-inner .site-navigation-secondary .menu-primary-nav-container .menu-item-link,
+.site-header-secondary .site-header-inner .site-navigation-secondary .menu-secondary-nav-container .menu-item-link {
+  text-decoration: none;
+  color: #383838;
+  font-weight: 400;
+  line-height: 1.193em;
+  padding: 0 1.47em; }
+
+.site-header-secondary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item-link.active {
+  font-weight: 700; }
+
+.site-header-secondary .site-header-inner .site-navigation-secondary .menu-secondary-nav-container .menu-item {
+  padding-left: 1.47em; }
 
 .btn {
   text-decoration: none; }
@@ -514,6 +577,25 @@ summary {
   line-height: 1.5em;
   font-weight: 600;
   margin: 1em 0; }
+
+.section-weather {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+
+.section-weather .weather-icon {
+  width: 100%;
+  height: 100%;
+  max-width: 1.5em;
+  max-height: 1.5em; }
+
+.section-weather .weather-info {
+  margin-left: 0.59em;
+  line-height: 1.1875em;
+  font-weight: 400;
+  color: #383838; }
 
 /**
  * Foundation for Sites
