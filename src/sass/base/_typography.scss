@@ -16,7 +16,7 @@ h6,
 .h4-like,
 .h5-like,
 .h6-like {
-  font-family: $font-secondary;
+  font-family: $font-primary;
 }
 
 @each $header,
@@ -86,11 +86,4 @@ button {
 
 .italic {
   font-style: italic;
-}
-
-.default-text {
-  font-weight: 600;
-  font-size: 1em;
-  line-height: 1.7;
-  color: $color-copy-muted;
 }

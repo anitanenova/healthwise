@@ -6,6 +6,22 @@
   src: url("../../fonts/SF-Pro-Text-Bold.eot");
   /* IE9 Compat Modes */
   src: url("../../fonts/SF-Pro-Text-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/SF-Pro-Text-Bold.woff") format("woff"), url("../../fonts/SF-Pro-Text-Bold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  src: url("../../fonts/SF-Pro-Text-Heavy.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/SF-Pro-Text-Heavy.eot") format("embedded-opentype"), url("../../fonts/SF-Pro-Text-Heavy.woff") format("woff"), url("../../fonts/SF-Pro-Text-Heavy.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  src: url("../../fonts/SF-Pro-Text-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/SF-Pro-Text-Light.eot") format("embedded-opentype"), url("../../fonts/SF-Pro-Text-Light.woff") format("woff"), url("../../fonts/SF-Pro-Text-Light.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  src: url("../../fonts/SF-Pro-Text-Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/SF-Pro-Text-Medium.eot") format("embedded-opentype"), url("../../fonts/SF-Pro-Text-Medium.woff") format("woff"), url("../../fonts/SF-Pro-Text-Medium.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  src: url("../../fonts/SF-Pro-Text-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/SF-Pro-Text-Regular.eot") format("embedded-opentype"), url("../../fonts/SF-Pro-Text-Regular.woff") format("woff"), url("../../fonts/SF-Pro-Text-Regular.ttf") format("truetype");
   /* Safari, Android, iOS */ }
 
 html {
@@ -23,7 +39,7 @@ h6,
 .h4-like,
 .h5-like,
 .h6-like {
-  font-family: "Lora", serif; }
+  font-family: "SF Pro Text", sans-serif; }
 
 h1 {
   font-size: 36px; }
@@ -113,12 +129,6 @@ button {
 
 .italic {
   font-style: italic; }
-
-.default-text {
-  font-weight: 600;
-  font-size: 1em;
-  line-height: 1.7;
-  color: #868686; }
 
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
