@@ -1,0 +1,40 @@
+.btn {
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-inline {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.6em;
+    border-bottom: 1px solid $color-copy;
+    color: $color-copy;
+  }
+
+  &-inline-tiny {
+    font-weight: 600;
+    font-size: 1.5em;
+    letter-spacing: -1px;
+    line-height: 2;
+    width: fit-content;
+    border-bottom: 1px solid $color-copy-muted;
+    color: $color-copy;
+  }
+
+  &-primary {
+    border: 1px solid $color-copy;
+    background-color: transparent;
+    color: $color-copy;
+    font-weight: 600;
+  }
+
+  &-big {
+    padding: 1.25em 6em;
+  }
+
+  &-small {
+    padding: 1.25em;
+  }
+}
