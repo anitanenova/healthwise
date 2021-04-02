@@ -1,0 +1,51 @@
+.card {
+  &-wrapper {
+    border: 1px solid $color-border-muted;
+    border-radius: $radius-primary;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    max-width: 31.25em;
+    max-height: 13.875em;
+    padding: 1.39875em 1.5em;
+
+    &:hover {
+      background-color: $color-primary;
+
+      .card-content {
+        color: $color-bg-white;
+
+        .header-title {
+          color: $color-bg-white;
+        }
+      }
+    }
+  }
+
+  &-content {
+    border: 1px solid $color-bg-white;
+    border-radius: $radius-secondary;
+    padding: 2.75em 0 2.75em 1.875em;
+    color: $color-copy-dark;
+
+    .section-header {
+      a {
+        text-decoration: none;
+      }
+
+      .header {
+        &-title {
+          color: $color-copy-dark;
+          font-weight: 600;
+          line-height: 26px;
+          margin: 0 0 1em 0;
+        }
+
+        &-subtitle {
+          line-height: 20.8px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

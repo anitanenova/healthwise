@@ -498,7 +498,8 @@ summary {
   padding-top: 7.3em; }
 
 .button {
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block; }
 
 .button:hover {
   cursor: pointer; }
@@ -589,7 +590,7 @@ summary {
   color: #383838; }
 
 .section-welcome {
-  padding: 3em 0; }
+  padding: 3em 0 3.4em 0; }
 
 .section-welcome-image .image-wrapper {
   position: relative; }
@@ -678,6 +679,87 @@ summary {
 
 .section-welcome .latest-news-button img {
   margin-left: 0.5em; }
+
+.card-wrapper {
+  border: 1px solid #dfdfdf;
+  border-radius: 0.3125em;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  max-width: 31.25em;
+  max-height: 13.875em;
+  padding: 1.39875em 1.5em; }
+
+.card-wrapper:hover {
+  background-color: #0b6e45; }
+
+.card-wrapper:hover .card-content {
+  color: #ffffff; }
+
+.card-wrapper:hover .card-content .header-title {
+  color: #ffffff; }
+
+.card-content {
+  border: 1px solid #ffffff;
+  border-radius: 0.1875em;
+  padding: 2.75em 0 2.75em 1.875em;
+  color: #383838; }
+
+.card-content .section-header a {
+  text-decoration: none; }
+
+.card-content .section-header .header-title {
+  color: #383838;
+  font-weight: 600;
+  line-height: 26px;
+  margin: 0 0 1em 0; }
+
+.card-content .section-header .header-subtitle {
+  line-height: 20.8px;
+  margin: 0; }
+
+.section-cards .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap; }
+
+.section-cards .card-wrapper {
+  flex: 49%;
+  margin-bottom: 0.5em; }
+
+.section-cards .card-wrapper:nth-child(odd) {
+  margin-right: 0.5em; }
+
+.section-cards .image-wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 34.5em;
+  max-height: 28.25em;
+  position: absolute;
+  right: 0; }
+
+.section-cards .image-wrapper img {
+  width: 100%;
+  height: 100%; }
+
+.section-cards .image-wrapper .image-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  display: flex;
+  padding: 0.625em 0.75em;
+  border-bottom-right-radius: 5px;
+  font-weight: 800;
+  text-transform: uppercase; }
+
+.section-cards .image-wrapper .image-button img {
+  margin-right: 0.625em; }
+
+.section-cards .fullwidth:first-child {
+  padding-right: 0.5em; }
+
+.section-cards .fullwidth:last-child {
+  padding-left: 0; }
 
 /**
  * Foundation for Sites
