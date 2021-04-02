@@ -1,0 +1,49 @@
+.article {
+  &-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .section-heading {
+      .heading {
+        &-title {
+          font-weight: 600;
+          line-height: 1.625em;
+          margin: 0.75em 0;
+        }
+
+        &-subtitle {
+          line-height: 1.5em;
+          margin: 0;
+        }
+      }
+    }
+
+    .image-wrapper {
+      width: 100%;
+      height: 100%;
+      max-height: 26.4em;
+      max-width: 36.875em;
+      border-radius: $radius-primary;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &-text {
+    line-height: 1.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-wrapper {
+      margin-bottom: 3.25em;
+    }
+  }
+}

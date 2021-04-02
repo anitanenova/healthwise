@@ -30,10 +30,10 @@
     }
   }
 
-  .section-header {
+  .section-heading {
     margin-top: 4.4375em;
     margin-bottom: 1.735em;
-    .header {
+    .heading {
       &-title {
         font-weight: 800;
         font-size: 2.125em;
@@ -49,20 +49,17 @@
     display: flex;
     flex-direction: column;
 
-    .section-header {
+    .section-heading {
       display: flex;
       flex-direction: row;
       align-items: center;
       margin: 0;
-      a {
-        text-decoration: none;
-      }
-      .header {
+
+      .heading {
         &-title {
           margin: 0 0 0 0.5em;
           font-weight: 700;
           font-size: 1.125em;
-          color: $color-copy-dark;
         }
       }
     }
@@ -80,12 +77,12 @@
           border-bottom: none;
         }
 
-        .section-header {
+        .section-heading {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
 
-          .header {
+          .heading {
             &-title {
               margin: 1.548em 0 0.625em 0;
               border-left: 0.375em solid $color-primary;
@@ -103,11 +100,6 @@
 
     &-button {
       align-self: flex-end;
-      display: flex;
-
-      img {
-        margin-left: 0.5em;
-      }
     }
   }
 }

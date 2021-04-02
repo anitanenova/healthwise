@@ -30,15 +30,10 @@
       top: 0;
       left: 0;
       background-color: $color-bg-white;
-      display: flex;
       padding: 0.625em 0.75em;
       border-bottom-right-radius: 5px;
       font-weight: 800;
       text-transform: uppercase;
-
-      img {
-        margin-right: 0.625em;
-      }
     }
   }
 
@@ -50,5 +45,15 @@
     &:last-child {
       padding-left: 0;
     }
+  }
+}
+
+.section-separator {
+  .separator-default {
+    height: 0.25em;
+    width: 100%;
+    border-radius: $radius-primary;
+    background-color: $color-primary;
+    margin-top: 3.125em;
   }
 }

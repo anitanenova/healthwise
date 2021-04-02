@@ -15,7 +15,7 @@
       .card-content {
         color: $color-bg-white;
 
-        .header-title {
+        .heading-title {
           color: $color-bg-white;
         }
       }
@@ -28,12 +28,8 @@
     padding: 2.75em 0 2.75em 1.875em;
     color: $color-copy-dark;
 
-    .section-header {
-      a {
-        text-decoration: none;
-      }
-
-      .header {
+    .section-heading {
+      .heading {
         &-title {
           color: $color-copy-dark;
           font-weight: 600;

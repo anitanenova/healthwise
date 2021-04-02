@@ -14,8 +14,21 @@
     font-weight: 700;
   }
 
-  &-text {
+  &-continue {
     color: $color-copy-dark;
     font-weight: 700;
+    display: flex;
+
+    &-right {
+      img {
+        margin-left: 0.5em;
+      }
+    }
+
+    &-left {
+      img {
+        margin-right: 0.625em;
+      }
+    }
   }
 }
