@@ -59,14 +59,29 @@
 }
 
 .section-articles {
+  margin: 1.5em 0 3.25em 0;
+  .articles-list {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    .list-item {
+      margin-bottom: 2.35em;
+
+      .article-wrapper {
+        .section-heading {
+          .heading-title {
+            margin: 0.5em 0;
+          }
+        }
+      }
+    }
+  }
+
   &-news {
     .articles-list {
-      padding-left: 0;
-      margin: 0;
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-
       .list-item {
         flex: 46%;
         margin-bottom: 2.35em;
@@ -74,13 +89,19 @@
         &:nth-child(odd) {
           margin-right: 2.5em;
         }
+      }
+    }
+  }
 
-        .article-wrapper {
-          .section-heading {
-            .heading-title {
-              margin: 0.5em 0;
-            }
-          }
+  &-sex {
+    .articles-list {
+      .list-item {
+        flex: 30%;
+        margin-bottom: 2.35em;
+        margin-right: 2.5em;
+
+        &:last-child {
+          margin-right: 0;
         }
       }
     }
