@@ -105,7 +105,7 @@ h6 {
   line-height: 30px; }
 
 .h4-like {
-  line-height: 24px; }
+  line-height: 26px; }
 
 .h5-like {
   line-height: 20px; }
@@ -380,7 +380,8 @@ summary {
   background: #ffffff; }
 
 .site-header-primary {
-  border-bottom: 1px solid #dddddd; }
+  border-bottom: 1px solid #dddddd;
+  background: #ffffff; }
 
 .site-header-primary .site-header-inner {
   display: flex;
@@ -421,7 +422,7 @@ summary {
   display: block;
   width: 2.5875em;
   height: 2.5875em;
-  border-radius: 5px;
+  border-radius: 0.3125em;
   background-color: #ebebeb;
   display: flex;
   flex-direction: row;
@@ -431,14 +432,8 @@ summary {
 .site-header-primary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item-link {
   text-decoration: none; }
 
-.site-header-primary .site-header-inner .site-navigation-primary .menu-primary-nav-container .menu-item-button {
-  background-color: #000000;
-  border-radius: 5px;
-  padding: 0.7em 0.875em;
-  color: #ffffff;
-  font-weight: 700; }
-
 .site-header-secondary {
+  background: #ffffff;
   border-bottom: 1px solid #dddddd; }
 
 .site-header-secondary .site-navigation-wrapper {
@@ -499,39 +494,25 @@ summary {
 .site-header-secondary .site-header-inner .site-navigation-secondary .menu-secondary-nav-container .menu-item {
   padding-left: 1.47em; }
 
-.btn {
+.site-content {
+  padding-top: 7.3em; }
+
+.button {
   text-decoration: none; }
 
-.btn:hover {
+.button:hover {
   cursor: pointer; }
 
-.btn-inline {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 0.6em;
-  border-bottom: 1px solid #000000;
-  color: #000000; }
+.button-primary {
+  background-color: #000000;
+  border-radius: 0.3125em;
+  padding: 0.7em 0.875em;
+  color: #ffffff;
+  font-weight: 700; }
 
-.btn-inline-tiny {
-  font-weight: 600;
-  font-size: 1.5em;
-  letter-spacing: -1px;
-  line-height: 2;
-  width: fit-content;
-  border-bottom: 1px solid #868686;
-  color: #000000; }
-
-.btn-primary {
-  border: 1px solid #000000;
-  background-color: transparent;
-  color: #000000;
-  font-weight: 600; }
-
-.btn-big {
-  padding: 1.25em 6em; }
-
-.btn-small {
-  padding: 1.25em; }
+.button-text {
+  color: #383838;
+  font-weight: 700; }
 
 .dropdown {
   position: relative; }
@@ -606,6 +587,97 @@ summary {
   line-height: 1.1875em;
   font-weight: 400;
   color: #383838; }
+
+.section-welcome {
+  padding: 3em 0; }
+
+.section-welcome-image .image-wrapper {
+  position: relative; }
+
+.section-welcome-image .image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 31.1875em;
+  max-width: 43.4375em; }
+
+.section-welcome-image .image-wrapper::before {
+  content: "";
+  display: block;
+  background-image: url(../../../dist/images/bg-green.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 46.3125em;
+  height: calc(100% + 5.71em);
+  border-top-right-radius: 0.3125em;
+  border-bottom-right-radius: 0.3125em;
+  top: -3em;
+  left: -24em;
+  z-index: -1; }
+
+.section-welcome .section-header {
+  margin-top: 4.4375em;
+  margin-bottom: 1.735em; }
+
+.section-welcome .section-header .header-title {
+  font-weight: 800;
+  font-size: 2.125em; }
+
+.section-welcome .section-header .header-text {
+  line-height: 1.5em; }
+
+.section-welcome .latest-news {
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column; }
+
+.section-welcome .latest-news .section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0; }
+
+.section-welcome .latest-news .section-header a {
+  text-decoration: none; }
+
+.section-welcome .latest-news .section-header .header-title {
+  margin: 0 0 0 0.5em;
+  font-weight: 700;
+  font-size: 1.125em;
+  color: #383838; }
+
+.section-welcome .latest-news .list {
+  margin: 0.625em 0;
+  padding: 0;
+  list-style: none; }
+
+.section-welcome .latest-news .list-item {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 1.875em; }
+
+.section-welcome .latest-news .list-item:last-child {
+  border-bottom: none; }
+
+.section-welcome .latest-news .list-item .section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.section-welcome .latest-news .list-item .section-header .header-title {
+  margin: 1.548em 0 0.625em 0;
+  border-left: 0.375em solid #0b6e45;
+  padding-left: 0.9375em; }
+
+.section-welcome .latest-news .list-item .section-header .header-subtitle {
+  margin: 0 0 0 1.8em;
+  font-size: 0.875em; }
+
+.section-welcome .latest-news-button {
+  align-self: flex-end;
+  display: flex; }
+
+.section-welcome .latest-news-button img {
+  margin-left: 0.5em; }
 
 /**
  * Foundation for Sites

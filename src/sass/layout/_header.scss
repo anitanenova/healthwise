@@ -9,6 +9,7 @@
   &-primary {
     border-bottom: 1px solid $color-border-light;
 
+    background: $color-bg-white;
     .site-header-inner {
       display: flex;
       align-items: center;
@@ -69,14 +70,6 @@
                 &-link {
                   text-decoration: none;
                 }
-
-                &-button {
-                  background-color: $color-copy;
-                  border-radius: $radius-primary;
-                  padding: 0.7em 0.875em;
-                  color: $color-bg-white;
-                  font-weight: 700;
-                }
               }
             }
           }
@@ -85,6 +78,7 @@
     }
   }
   &-secondary {
+    background: $color-bg-white;
     border-bottom: 1px solid $color-border-light;
     .site-navigation-wrapper {
       width: 100%;
