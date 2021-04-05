@@ -758,10 +758,10 @@ summary {
   width: 100%;
   border-radius: 0.3125em;
   background-color: #0b6e45;
-  margin-top: 3.125em; }
+  margin-top: 1em; }
 
 .section-articles {
-  margin: 1.5em 0 3.25em 0; }
+  margin: 1.5em 0 0 0; }
 
 .section-articles .articles-list {
   padding-left: 0;
@@ -776,11 +776,11 @@ summary {
 .section-articles .articles-list .list-item .article-wrapper .section-heading .heading-title {
   margin: 0.5em 0; }
 
-.section-articles-news .articles-list .list-item {
+.section-articles-news .articles-list .list-item, .section-articles-technology .articles-list .list-item {
   flex: 46%;
   margin-bottom: 2.35em; }
 
-.section-articles-news .articles-list .list-item:nth-child(odd) {
+.section-articles-news .articles-list .list-item:nth-child(odd), .section-articles-technology .articles-list .list-item:nth-child(odd) {
   margin-right: 2.5em; }
 
 .section-articles-sex .articles-list .list-item {

@@ -54,12 +54,12 @@
     width: 100%;
     border-radius: $radius-primary;
     background-color: $color-primary;
-    margin-top: 3.125em;
+    margin-top: 1em;
   }
 }
 
 .section-articles {
-  margin: 1.5em 0 3.25em 0;
+  margin: 1.5em 0 0 0;
   .articles-list {
     padding-left: 0;
     margin: 0;
@@ -80,7 +80,8 @@
     }
   }
 
-  &-news {
+  &-news,
+  &-technology {
     .articles-list {
       .list-item {
         flex: 46%;
