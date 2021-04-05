@@ -494,6 +494,106 @@ summary {
 .site-header-secondary .site-header-inner .site-navigation-secondary .menu-secondary-nav-container .menu-item {
   padding-left: 1.47em; }
 
+.site-footer {
+  width: 100%;
+  height: 100%;
+  max-height: 9.375em;
+  background: #0b6e45;
+  padding: 2.625em 0 3em 0; }
+
+.site-footer-primary .site-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%; }
+
+.site-footer-primary .site-footer-inner .site-branding .site-title {
+  font-size: 1em;
+  margin: 0; }
+
+.site-footer-primary .site-footer-inner .site-branding .site-title a {
+  display: block;
+  background: url(../../dist/images/logo-mini.svg) no-repeat center center;
+  background-size: contain;
+  text-indent: -999em;
+  width: 4.275em;
+  height: 4.1675em; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2.35em; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-primary .menu-primary-container .menu-primary-nav-container .menu {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-primary .menu-primary-container .menu-primary-nav-container .menu-item:not(:first-child)::before {
+  content: "";
+  width: 1px;
+  height: 0.729375em;
+  background-color: #dddddd;
+  transform: translateY(50%);
+  position: absolute; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-primary .menu-primary-container .menu-primary-nav-container .menu-item:first-child .menu-item-link {
+  padding-left: 0; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-primary .menu-primary-container .menu-primary-nav-container .menu-item:last-child .menu-item-link {
+  padding-right: 0; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-primary .menu-primary-container .menu-primary-nav-container .menu-item-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 1.193em;
+  padding: 0 1.47em; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-secondary .menu-secondary-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-secondary .menu-secondary-container .footer-copyright {
+  color: #ffffff;
+  margin-right: 1em; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-secondary .menu-secondary-container .menu-secondary-nav-container .menu {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-secondary .menu-secondary-container .menu-secondary-nav-container .menu-item {
+  margin: 0 0.25em; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-secondary .menu-secondary-container .menu-secondary-nav-container .menu-item:first-child {
+  margin-left: 0; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-secondary .menu-secondary-container .menu-secondary-nav-container .menu-item:last-child {
+  margin-right: 0; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-secondary .menu-secondary-container .menu-secondary-nav-container .menu-item-icon {
+  display: block;
+  width: 2.5875em;
+  height: 2.5875em;
+  border-radius: 0.3125em;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+
+.site-footer-primary .site-footer-inner .site-navigation-wrapper .site-navigation-secondary .menu-secondary-container .menu-secondary-nav-container .menu-item-link {
+  text-decoration: none; }
+
 .site-content {
   padding-top: 7.3em; }
 
