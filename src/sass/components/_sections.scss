@@ -108,3 +108,66 @@
     }
   }
 }
+
+.section-sport {
+  margin-top: 4.5em;
+
+  padding: 5em 0 4.5em 0;
+  border-top: 1px solid $color-border-light;
+  background-color: $color-bg-extra-light;
+
+  .articles-sport {
+    .articles-list {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-flow: row wrap;
+      margin: 2em 0 0 0;
+
+      .list-item {
+        &:not(:nth-child(4n + 4)) {
+          margin-right: 2.5em;
+        }
+
+        max-width: 16.375em;
+      }
+    }
+  }
+}
+
+.section-special-features {
+  padding: 5em 0 4.75em 0;
+  background-color: $color-bg-green;
+
+  .heading-primary {
+    .heading-title {
+      color: $color-bg-white;
+    }
+  }
+
+  .articles-special-features {
+    .articles-list {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-flow: row wrap;
+      margin: 1.375em 0 0 0;
+
+      .list-item {
+        &:not(:nth-child(3n + 3)) {
+          margin-right: 2.3575em;
+        }
+
+        max-width: 23.875em;
+        flex: 30%;
+
+        .section-heading {
+          .heading-title,
+          .heading-subtitle {
+            color: $color-bg-white;
+          }
+        }
+      }
+    }
+  }
+}

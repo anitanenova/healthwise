@@ -791,6 +791,50 @@ summary {
 .section-articles-sex .articles-list .list-item:last-child {
   margin-right: 0; }
 
+.section-sport {
+  margin-top: 4.5em;
+  padding: 5em 0 4.5em 0;
+  border-top: 1px solid #dddddd;
+  background-color: #fafafa; }
+
+.section-sport .articles-sport .articles-list {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2em 0 0 0; }
+
+.section-sport .articles-sport .articles-list .list-item {
+  max-width: 16.375em; }
+
+.section-sport .articles-sport .articles-list .list-item:not(:nth-child(4n + 4)) {
+  margin-right: 2.5em; }
+
+.section-special-features {
+  padding: 5em 0 4.75em 0;
+  background-color: #00673d; }
+
+.section-special-features .heading-primary .heading-title {
+  color: #ffffff; }
+
+.section-special-features .articles-special-features .articles-list {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1.375em 0 0 0; }
+
+.section-special-features .articles-special-features .articles-list .list-item {
+  max-width: 23.875em;
+  flex: 30%; }
+
+.section-special-features .articles-special-features .articles-list .list-item:not(:nth-child(3n + 3)) {
+  margin-right: 2.3575em; }
+
+.section-special-features .articles-special-features .articles-list .list-item .section-heading .heading-title,
+.section-special-features .articles-special-features .articles-list .list-item .section-heading .heading-subtitle {
+  color: #ffffff; }
+
 .section-heading a {
   text-decoration: none; }
 
