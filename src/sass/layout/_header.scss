@@ -36,39 +36,78 @@
 
       .site-navigation {
         &-primary {
-          .menu-primary-nav-container {
-            .menu {
-              list-style: none;
-              padding-left: 0;
+          .menu-primary-container {
+            .menu-mobile {
+              display: none;
+            }
+
+            .menu-primary-nav-container {
+              .menu {
+                list-style: none;
+                padding-left: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                &-item {
+                  margin: 0 0.25em;
+
+                  &:first-child {
+                    margin-left: 0;
+                  }
+
+                  &:last-child {
+                    margin-right: 0;
+                  }
+
+                  &-icon {
+                    display: block;
+                    width: 2.5875em;
+                    height: 2.5875em;
+                    border-radius: $radius-primary;
+                    background-color: $color-bg-light;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                  }
+
+                  &-link {
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      @media (max-width: $breakpoint-medium) {
+        max-height: 4em;
+
+        .site-branding {
+          .site-title {
+            a {
+              width: 6.125em;
+              height: 2.375em;
+            }
+          }
+        }
+
+        .site-navigation {
+          &-primary {
+            .menu-primary-container {
               display: flex;
               flex-direction: row;
               align-items: center;
 
-              &-item {
-                margin: 0 0.25em;
+              .menu-mobile {
+                display: block;
+                margin: 1em 0.5em;
+              }
 
-                &:first-child {
-                  margin-left: 0;
-                }
-
-                &:last-child {
-                  margin-right: 0;
-                }
-
-                &-icon {
-                  display: block;
-                  width: 2.5875em;
-                  height: 2.5875em;
-                  border-radius: $radius-primary;
-                  background-color: $color-bg-light;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: center;
-                }
-
-                &-link {
-                  text-decoration: none;
+              .menu-primary-nav-container {
+                .button-subscribe {
+                  display: none;
                 }
               }
             }
@@ -140,9 +179,7 @@
             }
           }
         }
-      }
 
-      .site-navigation {
         &-primary {
           .menu-primary-nav-container {
             .menu-item-link {
@@ -152,9 +189,7 @@
             }
           }
         }
-      }
 
-      .site-navigation {
         &-secondary {
           .menu-secondary-nav-container {
             .menu-item {
@@ -163,6 +198,81 @@
           }
         }
       }
+
+      @media (max-width: $breakpoint-medium) {
+        .site-navigation {
+          &-primary,
+          &-secondary {
+            .menu-primary-nav-container,
+            .menu-secondary-nav-container {
+              .menu {
+                &-item {
+                  &:not(:first-child)::before {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .site-navigation {
+          &-primary {
+            position: absolute;
+            width: 100%;
+            top: 7.25em;
+            left: 0;
+            transition: 0.5s;
+            transform: translateX(-100%);
+
+            .menu-primary-nav-container {
+              .menu {
+                width: 100%;
+                background-color: $color-bg-white;
+
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1em;
+                margin: 0;
+
+                &-item {
+                  margin: 0.4em 0;
+
+                  &::before {
+                    display: none;
+                  }
+                }
+
+                &-item-link {
+                  padding: 0;
+                }
+              }
+            }
+          }
+
+          &-secondary {
+            width: 100%;
+            .menu-secondary-nav-container {
+              .menu {
+                justify-content: space-between;
+              }
+              .menu-item {
+                &:first-child {
+                  padding-left: 0;
+                }
+
+                &:last-child {
+                  padding: 1em 0.5em;
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    max-height: 7em;
   }
 }

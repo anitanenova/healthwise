@@ -1,5 +1,7 @@
 const mobileMenu = document.querySelector(".menu-mobile");
-const nav = document.querySelector(".header-navigation");
+const nav = document.querySelector(
+  "div.site-header-secondary > div > div > div > div > nav.site-navigation-primary.site-navigation-primary"
+);
 
 mobileMenu.addEventListener("click", function (e) {
   let current = e.target.classList;

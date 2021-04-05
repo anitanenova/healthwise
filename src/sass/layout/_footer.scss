@@ -8,45 +8,52 @@
   &-primary {
     .site-footer-inner {
       display: flex;
+      flex-flow: row wrap;
       align-items: center;
       justify-content: space-between;
       height: 100%;
 
-      .site-branding {
-        .site-title {
-          font-size: 1em;
-          margin: 0;
-
-          a {
-            display: block;
-            background: url(../../dist/images/logo-mini.svg) no-repeat center
-              center;
-            background-size: contain;
-            text-indent: -999em;
-
-            width: 4.275em;
-            height: 4.1675em;
-          }
-        }
-      }
-
-      .site-navigation-wrapper {
-        width: 100%;
+      .footer-inner-wrapper {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        margin-left: 2.35em;
 
-        .site-navigation {
-          &-primary {
+        .site-branding {
+          .site-title {
+            font-size: 1em;
+            margin: 0;
+
+            a {
+              display: block;
+              background: url(../../dist/images/logo-mini.svg) no-repeat center
+                center;
+              background-size: contain;
+              text-indent: -999em;
+
+              width: 4.275em;
+              height: 4.1675em;
+
+              @media (max-width: $breakpoint-normal) {
+                width: 4.6125em;
+                height: 3.875em;
+              }
+            }
+          }
+        }
+
+        .site-navigation-primary-wrapper {
+          margin-left: 2.35em;
+          @media (max-width: $breakpoint-normal) {
+            margin-left: 1em;
+          }
+          .site-navigation-primary {
             .menu-primary-container {
               .menu-primary-nav-container {
                 .menu {
                   list-style: none;
                   padding-left: 0;
                   display: flex;
-                  flex-direction: row;
+                  flex-flow: row wrap;
                   align-items: center;
 
                   &-item {
@@ -79,55 +86,52 @@
                       padding: 0 1.47em;
                     }
                   }
-                }
-              }
-            }
-          }
 
-          &-secondary {
-            .menu-secondary-container {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-
-              .footer-copyright {
-                color: $color-bg-white;
-                margin-right: 1em;
-              }
-
-              .menu-secondary-nav-container {
-                .menu {
-                  list-style: none;
-                  padding-left: 0;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-
-                  &-item {
-                    margin: 0 0.25em;
-
-                    &:first-child {
-                      margin-left: 0;
+                  @media (max-width: $breakpoint-normal) {
+                    margin: 0;
+                    height: 3.875em;
+                    flex: 1 1 37em;
+                    &-item {
+                      &:nth-last-child(1) {
+                        &::before {
+                          display: none;
+                        }
+                        a {
+                          padding-left: 0;
+                        }
+                      }
+                      &:nth-last-child(2) {
+                        a {
+                          padding-right: 0;
+                        }
+                      }
                     }
+                  }
 
-                    &:last-child {
-                      margin-right: 0;
-                    }
-
-                    &-icon {
-                      display: block;
-                      width: 2.5875em;
-                      height: 2.5875em;
-                      border-radius: $radius-primary;
-                      background-color: $color-bg-light;
-                      display: flex;
-                      flex-direction: row;
-                      align-items: center;
-                      justify-content: center;
-                    }
-
-                    &-link {
-                      text-decoration: none;
+                  @media (max-width: $breakpoint-small) {
+                    &-item {
+                      &:nth-last-child(1) {
+                        &::before {
+                          display: block;
+                        }
+                        a {
+                          padding-left: 1.47em;
+                        }
+                      }
+                      &:nth-last-child(2) {
+                        a {
+                          padding-right: 1.47em;
+                        }
+                      }
+                      &:nth-last-child(3) {
+                        &::before {
+                          display: none;
+                        }
+                        a {
+                          padding-left: 0;
+                          padding-right: 1.47em;
+                        }
+                      }
                     }
                   }
                 }
@@ -136,6 +140,69 @@
           }
         }
       }
+      .site-navigation-secondary-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .site-navigation-secondary {
+          .menu-secondary-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .footer-copyright {
+              color: $color-bg-white;
+              margin-right: 1em;
+            }
+
+            .menu-secondary-nav-container {
+              .menu {
+                list-style: none;
+                padding-left: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                &-item {
+                  margin: 0 0.25em;
+
+                  &:first-child {
+                    margin-left: 0;
+                  }
+
+                  &:last-child {
+                    margin-right: 0;
+                  }
+
+                  &-icon {
+                    display: block;
+                    width: 2.5875em;
+                    height: 2.5875em;
+                    border-radius: $radius-primary;
+                    background-color: $color-bg-light;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                  }
+
+                  &-link {
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
+
+  @media (max-width: $breakpoint-extra-large) {
+    max-height: 100%;
+
+    padding: 1.5625em 0 2.2875em 0;
   }
 }

@@ -1,18 +1,35 @@
 .section-welcome {
   padding: 3em 0 3.4em 0;
+  @media (max-width: $breakpoint-small) {
+    padding: 0 0 3.4em 0;
+  }
 
   &-image {
     .image-wrapper {
       position: relative;
+      width: 100%;
+      height: 100%;
+      max-height: 31.1875em;
+      max-width: 43.4375em;
 
       img {
         display: block;
 
         width: 100%;
         height: 100%;
-        max-height: 31.1875em;
-        max-width: 43.4375em;
       }
+
+      .image-button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $color-bg-white;
+        padding: 0.625em 0.75em;
+        border-top-right-radius: 5px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
       &::before {
         content: "";
         display: block;
@@ -27,6 +44,26 @@
         left: -24em;
         z-index: -1;
       }
+
+      @media (max-width: $breakpoint-medium) {
+        padding: 0.625em 0 0 0;
+
+        &::before {
+          width: 40em;
+        }
+      }
+
+      @media (max-width: $breakpoint-small) {
+        &::before {
+          width: calc(100% + 1.25rem);
+          max-width: 39.75em;
+          left: -0.625em;
+          top: -1.375em;
+          height: 100%;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
     }
   }
 
@@ -40,6 +77,21 @@
       }
       &-text {
         line-height: 1.5em;
+      }
+    }
+
+    @media (max-width: $breakpoint-small) {
+      margin-top: 1.125em;
+      margin-bottom: 1.125em;
+
+      .heading {
+        &-title {
+          font-size: 1.5em;
+          line-height: 1.79em;
+        }
+        &-text {
+          line-height: 1.5em;
+        }
       }
     }
   }
@@ -100,6 +152,44 @@
 
     &-button {
       align-self: flex-end;
+    }
+
+    @media (max-width: $breakpoint-small) {
+      padding-left: 0;
+
+      .section-heading {
+        margin-top: 2.25em;
+        img {
+          display: none;
+        }
+        .heading-title {
+          font-weight: 800;
+          line-height: 1.1875em;
+          font-size: 1em;
+          text-transform: uppercase;
+          margin-left: 0;
+        }
+      }
+
+      .list {
+        margin-top: 1.1875em;
+
+        &-item {
+          padding-bottom: 1em;
+
+          .section-heading {
+            margin-top: 0;
+
+            .heading-title {
+              margin-top: 1em;
+              font-size: 1.125em;
+              font-weight: 500;
+              line-height: 1.4625em;
+              text-transform: none;
+            }
+          }
+        }
+      }
     }
   }
 }
