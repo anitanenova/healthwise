@@ -521,7 +521,7 @@ summary {
   .site-header-secondary .site-header-inner .site-navigation-primary {
     position: absolute;
     width: 100%;
-    top: 7.25em;
+    top: 7.1em;
     left: 0;
     transition: 0.5s;
     transform: translateX(-100%); }
@@ -695,6 +695,10 @@ summary {
 .site-content {
   padding-top: 7.3em; }
 
+@media (max-width: 960px) {
+  .site-content {
+    padding-top: 7em; } }
+
 .button {
   text-decoration: none;
   display: inline-block; }
@@ -839,7 +843,7 @@ summary {
 
 @media (max-width: 960px) {
   .section-welcome-image .image-wrapper {
-    padding: 0.625em 0 0 0; }
+    padding: 1em 0 0 0; }
   .section-welcome-image .image-wrapper::before {
     width: 40em; } }
 
