@@ -44,4 +44,21 @@
       }
     }
   }
+
+  @media (max-width: $breakpoint-large) {
+    &-wrapper {
+      max-height: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoint-normal) {
+    &-wrapper {
+      flex: 100%;
+      margin-right: 0;
+    }
+    &-content {
+      padding: 2.4375em 2.25em;
+      border: none;
+    }
+  }
 }
