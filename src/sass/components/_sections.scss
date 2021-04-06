@@ -132,21 +132,18 @@
 }
 
 .section-articles {
-  .articles-list {
-    padding-left: 0;
-    margin: 0;
-    list-style: none;
+  .articles-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+  }
 
-    .list-item {
-      margin-bottom: 2.35em;
-
-      .article-wrapper {
-        .section-heading {
-          .heading-title {
-            margin: 0.5em 0;
-          }
+  &-news,
+  &-technology,
+  &-sex {
+    .section-heading {
+      .heading-primary {
+        .heading-title {
+          margin: 0.5em 0 1.5em 0;
         }
       }
     }
@@ -154,69 +151,31 @@
 
   &-news,
   &-technology {
-    margin: 1.5em 0 0 0;
+    .articles-wrapper {
+      div:nth-child(odd) {
+        padding-left: 0;
+      }
 
-    .articles-list {
-      .list-item {
-        flex: 46%;
+      div:nth-child(even) {
+        padding-right: 0;
+      }
+
+      .article {
         margin-bottom: 2.35em;
 
-        &:nth-child(odd) {
-          margin-right: 2.5em;
+        .image-wrapper {
+          padding: 0;
         }
       }
-    }
-  }
 
-  &-sex {
-    margin: 1.5em 0 0 0;
-
-    .articles-list {
-      .list-item {
-        flex: 30%;
-        margin-bottom: 2.35em;
-        margin-right: 2.5em;
-
-        &:last-child {
-          margin-right: 0;
+      @media (max-width: $breakpoint-medium) {
+        margin-top: 1.625em;
+        div:nth-child(odd) {
+          padding-right: 0.3125em;
         }
-      }
-    }
-    @media (max-width: $breakpoint-medium) {
-      .articles-list {
-        .list-item {
-          flex: 25%;
-        }
-      }
-    }
 
-    @media (max-width: $breakpoint-small) {
-      .articles-list {
-        .list-item {
-          margin-right: 1em;
-        }
-      }
-    }
-
-    @media (max-width: $breakpoint-extra-small) {
-      .articles-list {
-        flex-direction: column;
-
-        .list-item {
-          flex: 100%;
-          margin-right: 0;
-          margin-bottom: 1.6875em;
-
-          .article-wrapper {
-            max-width: 36.875em;
-
-            .section-heading {
-              .header-title {
-                font-size: 0.875em;
-                line-height: 1.1375em;
-              }
-            }
-          }
+        div:nth-child(even) {
+          padding-left: 0.3125em;
         }
       }
     }
@@ -225,69 +184,68 @@
   &-news {
     @media (max-width: $breakpoint-large) {
       .row > div {
-        &:last-child {
+        &:last-child,
+        &:first-child {
           order: -1;
         }
       }
     }
   }
+}
 
-  &-news,
-  &-technology {
-    @media (max-width: $breakpoint-large) {
-      .article-text-wrapper {
-        margin-bottom: 1.8125em;
-      }
+.section-articles-sex,
+.section-sport,
+.section-special-features {
+  .articles-wrapper {
+    width: calc(100% + 1.875em);
+    left: -0.9375em;
+    position: relative;
 
-      .articles-list {
-        margin-top: 1.625em;
-      }
+    .article {
+      margin-bottom: 2.35em;
     }
 
-    .articles-list {
-      .list-item {
-        flex: 46%;
-        margin-bottom: 1.5em;
-
-        &:nth-child(odd) {
-          margin-right: 0.625em;
-        }
-      }
+    @media (max-width: $breakpoint-medium) {
+      width: calc(100% + 1.25em);
+      left: -0.625em;
     }
   }
 }
+
 .section-sport {
   margin-top: 4.5em;
 
   padding: 5em 0 4.5em 0;
   border-top: 1px solid $color-border-light;
   background-color: $color-bg-extra-light;
-  .articles-list {
-    .list-item {
-      flex: 20%;
 
-      &:not(:nth-child(4n + 4)) {
-        margin-right: 2.5em;
+  .section-heading {
+    .heading-primary {
+      .heading-title {
+        margin: 0 0 2em 0;
+        @media (max-width: $breakpoint-medium) {
+          margin: 0;
+        }
       }
     }
   }
+  .articles-wrapper {
+    .article {
+      margin-bottom: 2.35em;
 
-  @media (max-width: $breakpoint-large) {
-    .articles-list {
+      .image-wrapper {
+        padding: 0;
+      }
+    }
+
+    @media (max-width: $breakpoint-medium) {
       margin-top: 1.5em;
+      div:nth-child(odd) {
+        padding-right: 0.3125em;
+      }
 
-      .list-item {
-        flex: 35%;
-
-        margin-bottom: 1.5em;
-
-        &:nth-child(odd) {
-          margin-right: 0.625em;
-        }
-
-        &:nth-child(even) {
-          margin-right: 0;
-        }
+      div:nth-child(even) {
+        padding-left: 0.3125em;
       }
     }
   }
@@ -302,61 +260,32 @@
   padding: 5em 0 4.75em 0;
   background-color: $color-bg-green;
 
-  .heading-primary {
-    .heading-title {
-      color: $color-bg-white;
+  .section-heading {
+    .heading-primary {
+      .heading-title {
+        margin: 0 0 1.5em 0;
+        color: $color-bg-white;
+      }
     }
   }
 
-  .articles-list {
-    margin: 1.375em 0 0 0;
+  .articles-wrapper {
+    .article {
+      &-box {
+        .article-title {
+          a {
+            color: $color-bg-white;
+          }
+        }
 
-    .list-item {
-      &:not(:nth-child(3n + 3)) {
-        margin-right: 2.3575em;
-      }
-
-      flex: 30%;
-
-      .section-heading {
-        .heading-title,
-        .heading-subtitle {
+        .article-thumbnail {
           color: $color-bg-white;
         }
       }
     }
   }
 
-  @media (max-width: $breakpoint-medium) {
-    .articles-list {
-      .list-item {
-        flex: 20%;
-      }
-    }
-  }
-
   @media (max-width: $breakpoint-normal) {
-    padding: 1em 0 0 0;
-  }
-
-  @media (max-width: $breakpoint-small) {
-    .articles-list {
-      .list-item {
-        &:not(:nth-child(3n + 3)) {
-          margin-right: 1em;
-        }
-      }
-    }
-  }
-  @media (max-width: $breakpoint-extra-small) {
-    .articles-list {
-      .list-item {
-        flex: 100%;
-
-        &:nth-child(n) {
-          margin-right: 0;
-        }
-      }
-    }
+    padding: 1.5em 0 0 0;
   }
 }

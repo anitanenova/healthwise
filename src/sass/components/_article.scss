@@ -1,22 +1,26 @@
 .article {
-  &-wrapper {
+  width: 100%;
+
+  &-box {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
-    .section-heading {
-      .heading {
-        &-title {
-          font-weight: 600;
-          line-height: 1.625em;
-          margin: 0.75em 0;
-        }
+    .article {
+      &-title {
+        margin: 1.125em 0 0.875em 0;
 
-        &-subtitle {
-          line-height: 1.5em;
-          margin: 0;
+        a {
+          font-weight: 600;
+          color: $color-copy-dark;
+          text-decoration: none;
         }
+      }
+
+      &-thumbnail {
+        line-height: 1.5em;
+        margin: 0;
       }
     }
 
@@ -43,22 +47,24 @@
 
     &-wrapper {
       margin-bottom: 3.55em;
+
+      @media (max-width: $breakpoint-medium) {
+        margin-bottom: 1.8125em;
+      }
     }
   }
 
   @media (max-width: $breakpoint-normal) {
-    &-wrapper {
-      .section-heading {
-        .heading {
-          &-title {
-            font-size: 1em;
-            line-height: 1.3em;
-          }
+    &-box {
+      .article {
+        &-title {
+          font-size: 1em;
+          line-height: 1.3em;
+        }
 
-          &-subtitle {
-            font-size: 0.875em;
-            line-height: 1.1375em;
-          }
+        &-thumbnail {
+          font-size: 0.875em;
+          line-height: 1.1375em;
         }
       }
     }
