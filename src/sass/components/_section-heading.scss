@@ -13,6 +13,10 @@
         font-weight: 800;
         text-transform: uppercase;
         margin: 0.5em 0;
+
+        @media (max-width: $breakpoint-normal) {
+          margin: 0.5em 0 0 0;
+        }
       }
     }
   }

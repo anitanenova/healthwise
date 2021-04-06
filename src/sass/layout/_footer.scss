@@ -90,48 +90,28 @@
                   @media (max-width: $breakpoint-normal) {
                     margin: 0;
                     height: 3.875em;
-                    flex: 1 1 37em;
+                    max-width: 60%;
                     &-item {
-                      &:nth-last-child(1) {
-                        &::before {
-                          display: none;
-                        }
-                        a {
-                          padding-left: 0;
-                        }
-                      }
-                      &:nth-last-child(2) {
-                        a {
-                          padding-right: 0;
-                        }
-                      }
-                    }
-                  }
-
-                  @media (max-width: $breakpoint-small) {
-                    &-item {
-                      &:nth-last-child(1) {
-                        &::before {
-                          display: block;
-                        }
-                        a {
-                          padding-left: 1.47em;
-                        }
-                      }
-                      &:nth-last-child(2) {
-                        a {
-                          padding-right: 1.47em;
-                        }
-                      }
                       &:nth-last-child(3) {
                         &::before {
                           display: none;
                         }
                         a {
                           padding-left: 0;
-                          padding-right: 1.47em;
                         }
                       }
+                    }
+                  }
+
+                  @media (max-width: $breakpoint-small) {
+                    max-width: 80%;
+                  }
+
+                  @media (max-width: $breakpoint-extra-small) {
+                    max-width: 100%;
+
+                    &-item-link {
+                      padding: 0 0.5em;
                     }
                   }
                 }
